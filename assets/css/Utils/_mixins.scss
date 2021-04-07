@@ -1,0 +1,9 @@
+@mixin text-font {
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+}
+
+@mixin title-font {
+    font-family: Shrikhand, cursive;
+    font-size: 1.5rem;
+}
