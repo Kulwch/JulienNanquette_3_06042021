@@ -1,6 +1,7 @@
 header {
     display: flex;
     justify-content: center;
+    height: 62px;
     h1 {
         @include title-font;
     }
