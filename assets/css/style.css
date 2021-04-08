@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,7 +47,9 @@ footer .nav {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #fff;
-  padding-left: 24px;
+  padding: 31px 0px 38px 24px;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
 }
 
 footer .nav__heading {
@@ -58,14 +64,32 @@ footer .nav__link {
   padding-top: 10px;
 }
 
-footer .nav__link--icon {
+footer .nav__link--bold {
+  font-weight: bold;
+}
+
+footer .nav__link--utensils-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 13px;
+  font-size: 14px;
   padding-right: 12px;
+}
+
+footer .nav__link--hands-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 11px;
+  margin-right: 10px;
+}
+
+footer .nav__link--mailto {
+  color: #fff;
 }
 
 section {
