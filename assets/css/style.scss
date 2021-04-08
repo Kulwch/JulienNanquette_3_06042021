@@ -4,6 +4,8 @@
 @import "./Base/norms";
 @import "./Layouts/header";
 @import "./Layouts/footer";
+@import "./Pages/info-section";
+@import "./Pages/manual";
 section {
     display: flex;
     flex-direction: column;
@@ -19,39 +21,7 @@ form {
     }
 }
 
-.info-section {
-    display: flex;
-    flex-direction: column;
-    background-color: #f6f6f6;
-    height: 327px;
-    &__title {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        text-align: center;
-        width: 229px;
-        padding: 0px 73px 0px 73px;
-    }
-    &__heading {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 303px;
-        padding: 0px 36px 0px 36px;
-        font-size: 1.2rem;
-        text-align: center;
-    }
-    &__explorer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        width: 218px;
-        margin: 0px 78.5pc 0px 78.5px;
-        border-radius: 25px;
-        border: 1px solid $color-primary;
-        background-color: $color-secondary;
-        color: #fff
-    }
+.card__picture {
+    height: 174px;
+    width: 100%;
 }

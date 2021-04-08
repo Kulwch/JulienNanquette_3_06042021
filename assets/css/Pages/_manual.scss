@@ -1,0 +1,43 @@
+.manual {
+    display: flex;
+    flex-direction: column;
+    &__heading {
+        padding-left: 22px;
+    }
+    &__list {
+        margin-left: 10px;
+        .item {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0px 20px 24px 20px;
+            width: 326px;
+            height: 72px;
+            background-color: #f6f6f6;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px 0 #c3c3c3;
+            &__number {
+                border: 1px solid $color-primary;
+                background: $color-primary;
+                color: #fff;
+                margin: 0px 22px 0px -10px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include text-font;
+            }
+            &__icon {
+                @include icon-styling;
+                font-size: 1.5rem;
+            }
+            &__description {
+                @include text-font;
+                font-weight: bold;
+            }
+        }
+    }
+}

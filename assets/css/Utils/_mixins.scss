@@ -7,3 +7,8 @@
     font-family: Shrikhand, cursive;
     font-size: 1.8rem;
 }
+
+@mixin icon-styling {
+    margin-right: 22px;
+    color: #7e7e7e;
+}

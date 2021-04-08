@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <header>
-        <h1 class="__heading ">Ohmyfood</h1>
+    <header class="header">
+        <h1 class="header__heading ">Ohmyfood</h1>
     </header>
 
     <main>
         <section class="info-section ">
-            <form class="info-section__location">
+            <form class="info-section__location-form">
                 <i class="fas fa-map-marker-alt "></i>
                 <p>Paris, Belleville</p>
             </form>
@@ -32,14 +32,20 @@
         <section class="manual ">
             <h2 class="manual__heading">Fonctionnement</h2>
             <ul class="manual__list">
-                <li class="manual__item"><i class="fas fa-mobile-alt "></i>
-                    <p>Choisissez un restaurant</p>
+                <li class="item">
+                    <p class="item__number">1</p>
+                    <i class="fas fa-mobile-alt item__icon "></i>
+                    <p class="item__description">Choisissez un restaurant</p>
                 </li>
-                <li class="manual__item"><i class="fas fa-list-ul "></i>
-                    <p>Composez votre menu</p>
+                <li class="item">
+                    <p class="item__number">2</p>
+                    <i class="fas fa-list-ul item__icon "></i>
+                    <p class="item__description">Composez votre menu</p>
                 </li>
-                <li class="manual__item"><i class="fas fa-store "></i>
-                    <p>Dégustez au restaurant</p>
+                <li class="item">
+                    <p class="item__number">3</p>
+                    <i class="fas fa-store item__icon "></i>
+                    <p class="item__description">Dégustez au restaurant</p>
                 </li>
             </ul>
         </section>
@@ -48,7 +54,7 @@
             <article class="card">
                 <a class="card__link" href="palette-du-gout.html ">
                     <figure class="card__display">
-                        <img class="card__picture" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg " />
+                        <img class="card__picture" loading="lazy" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg " />
                         <figcaption class="card__heading">
                             <header class="card__header">
                                 <h3 class="card__name">
@@ -61,49 +67,49 @@
                     </figure>
                 </a>
             </article>
-            <article>
-                <a href="note-enchantee.html">
-                    <figure>
-                        <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg " />
-                        <figcaption>
-                            <header>
-                                <h3>
+            <article class="card">
+                <a class="card__link" href="note-enchantee.html">
+                    <figure class="card__display">
+                        <img class="card__picture" loading="lazy" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg " />
+                        <figcaption class="card__heading">
+                            <header class="card__header">
+                                <h3 class="card__name">
                                     La note enchantée
                                 </h3>
-                                <p>Charonne</p>
-                                <i class="far fa-heart "></i>
+                                <p class="card__location">Charonne</p>
+                                <i class="far fa-heart card__favorite card__favorite--checked"></i>
                             </header>
                         </figcaption>
                     </figure>
                 </a>
             </article>
-            <article>
-                <a href="a-la-francaise.html">
-                    <figure>
-                        <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg " />
-                        <figcaption>
-                            <header>
-                                <h3>
+            <article class="card">
+                <a class="card__link" href="a-la-francaise.html">
+                    <figure class="card__display">
+                        <img class="card__picture" loading="lazy" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg " />
+                        <figcaption class="card__heading">
+                            <header class="card__header">
+                                <h3 class="card__name">
                                     &Agrave; la française
                                 </h3>
-                                <p>Cité Rouge</p>
-                                <i class="far fa-heart "></i>
+                                <p class="card__location">Cité Rouge</p>
+                                <i class="far fa-heart card__favorite card__favorite--checked"></i>
                             </header>
                         </figcaption>
                     </figure>
                 </a>
             </article>
-            <article>
-                <a href="delice-des-sens.html">
-                    <figure>
-                        <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg " />
-                        <figcaption>
-                            <header>
-                                <h3>
+            <article class="card">
+                <a class="card__link" href="delice-des-sens.html">
+                    <figure class="card__display">
+                        <img class="card__picture" loading="lazy" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg " />
+                        <figcaption class="card__heading">
+                            <header class="card__header">
+                                <h3 class="card__name">
                                     Le délice des sens
                                 </h3>
-                                <p>Folie-Méricourt</p>
-                                <i class="far fa-heart "></i>
+                                <p class="card__location">Folie-Méricourt</p>
+                                <i class="far fa-heart card__favorite card__favorite--checked"></i>
                             </header>
                         </figcaption>
                     </figure>

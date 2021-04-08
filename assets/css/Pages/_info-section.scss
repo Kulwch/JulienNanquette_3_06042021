@@ -1,0 +1,39 @@
+.info-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    height: 327px;
+    &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 229px;
+        padding: 0px 73px 0px 73px;
+        @include text-font;
+        font-weight: bold;
+    }
+    &__heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 303px;
+        padding: 0px 36px 0px 36px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    &__explorer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 218px;
+        margin: 0px 78.5px 0px 78.5px;
+        border-radius: 25px;
+        background: linear-gradient($color-secondary, $color-primary);
+        box-shadow: 0 5px 15px 0 #c3c3c3;
+        color: #fff;
+        @include text-font;
+    }
+}
