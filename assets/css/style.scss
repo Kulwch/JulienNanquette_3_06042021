@@ -8,12 +8,3 @@
 @import "./Pages/manual";
 @import "./Pages/restaurants";
 @import "./Components/btn-new";
-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.card__picture {
-    height: map-get($picture-height, index);
-    width: 100%;
-}

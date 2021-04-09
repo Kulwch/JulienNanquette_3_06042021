@@ -1,6 +1,5 @@
-@mixin text-font {
+@mixin text-font($font-size: 1rem) {
     font-family: Roboto, sans-serif;
-    font-size: 1rem;
 }
 
 @mixin title-font {

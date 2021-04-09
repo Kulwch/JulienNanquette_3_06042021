@@ -1,9 +1,11 @@
 .btn-new {
     @include flex-row;
+    justify-content: center;
+    align-items: center;
     background: $color-tertiary;
     border-radius: 1px;
     color: darken($color-tertiary, 35%);
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
     height: 29px;
     width: 80px;

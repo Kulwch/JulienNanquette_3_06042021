@@ -4,11 +4,17 @@ body {
     margin: 0;
 }
 
-a {
+a,
+a:visited {
     text-decoration: none;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
 }

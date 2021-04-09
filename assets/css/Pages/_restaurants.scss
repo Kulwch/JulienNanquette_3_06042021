@@ -3,8 +3,7 @@
     &__heading {
         @include flex-row;
         margin: 56px 0px 28px 18px;
-        @include text-font;
-        font-size: 1.5rem;
+        @include text-font(1.5rem);
     }
 }
 
