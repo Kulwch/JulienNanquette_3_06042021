@@ -17,6 +17,10 @@
             background-color: #f6f6f6;
             border-radius: 25px;
             box-shadow: 0 5px 15px 0 #c3c3c3;
+            &__link {
+                display: flex;
+                flex-direction: row;
+            }
             &__number {
                 border: 1px solid $color-primary;
                 background: $color-primary;
@@ -37,6 +41,12 @@
             &__description {
                 @include text-font;
                 font-weight: bold;
+            }
+            &:hover {
+                background: $color-state;
+                >.item__icon--state {
+                    color: $color-primary;
+                }
             }
         }
     }

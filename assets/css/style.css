@@ -1,5 +1,4 @@
 /* Variables */
-/* Fonts */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css " integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==');
 body {
   -webkit-box-sizing: border-box;
@@ -213,6 +212,16 @@ footer .nav__link--mailto {
           box-shadow: 0 5px 15px 0 #c3c3c3;
 }
 
+.manual__list .item__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .manual__list .item__number {
   border: 1px solid #9356DC;
   background: #9356DC;
@@ -244,6 +253,14 @@ footer .nav__link--mailto {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.manual__list .item:hover {
+  background: #f5edff;
+}
+
+.manual__list .item:hover > .item__icon--state {
+  color: #9356DC;
 }
 
 section {
