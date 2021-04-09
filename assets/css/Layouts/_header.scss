@@ -1,8 +1,9 @@
-header {
+.header {
     display: flex;
     justify-content: center;
-    height: 62px;
-    h1 {
-        @include title-font;
+    &__logo {
+        width: 162px;
+        @include flex-row;
+        margin: 23px 0px 12px 0px;
     }
 }

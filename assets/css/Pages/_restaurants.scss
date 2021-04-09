@@ -1,0 +1,59 @@
+.restaurants {
+    background: #f6f6f6;
+    &__heading {
+        @include flex-row;
+        margin: 56px 0px 28px 18px;
+        @include text-font;
+        font-size: 1.5rem;
+    }
+}
+
+.card {
+    @include flex-column;
+    &__link {
+        @include flex-column;
+        margin: 0px 18px 18px 18px;
+    }
+    &__display {
+        @include flex-column;
+        position: relative;
+    }
+    &__picture {
+        height: map-get($picture-height, index);
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    &__heading {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background: $white;
+    }
+    &__header {
+        height: 77px;
+        width: 100%;
+        @include flex-column;
+        flex-wrap: wrap;
+        >.card__name {
+            padding: 0;
+            margin: 18px 0px 0px 14px;
+            @include text-font;
+            color: $black;
+            font-weight: bold;
+            +.card__location {
+                padding: 0;
+                margin: 8px 0px 0px 14px;
+                @include text-font;
+                color: $black;
+                +.card__favorite {
+                    @include flex-row;
+                    justify-content: flex-end;
+                    margin: 26px 24px 0px 0px;
+                    font-size: 1.5rem;
+                    font-weight: 100;
+                    color: $black;
+                }
+            }
+        }
+    }
+}

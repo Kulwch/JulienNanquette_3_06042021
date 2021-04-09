@@ -6,22 +6,14 @@
 @import "./Layouts/footer";
 @import "./Pages/info-section";
 @import "./Pages/manual";
+@import "./Pages/restaurants";
+@import "./Components/btn-new";
 section {
     display: flex;
     flex-direction: column;
 }
 
-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eaeaea;
-    p {
-        padding-left: 16px;
-    }
-}
-
 .card__picture {
-    height: 174px;
+    height: map-get($picture-height, index);
     width: 100%;
 }

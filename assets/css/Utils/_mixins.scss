@@ -12,3 +12,19 @@
     margin-right: 22px;
     color: #7e7e7e;
 }
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
