@@ -1,0 +1,40 @@
+.menu-header {
+    @include flex-row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 62px;
+    &__link {
+        margin-left: 22px;
+        color: $black;
+    }
+    &__logo {
+        margin-left: 65px;
+    }
+}
+
+.section {
+    background: #f6f6f6;
+    &__pic {
+        @include flex-column;
+        height: map-get($picture-height, menu);
+        object-fit: cover;
+    }
+    &__header {
+        @include flex-row;
+        margin: -40px 0px 0px 0px;
+        justify-content: flex-start;
+        padding-left: 18px;
+        align-items: center;
+        z-index: 1;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        background: $light-grey;
+    }
+    &__heading {
+        @include title-font;
+    }
+    &__heart-icon {
+        padding-left: 40px;
+        font-size: 1.5rem;
+    }
+}

@@ -10,11 +10,11 @@ footer {
         @include text-font;
         &__heading {
             font-family: Shrikhand;
-            font-weight: bold;
         }
         &__link {
             display: flex;
             padding-top: 10px;
+            color: $white;
             &--bold {
                 font-weight: bold;
             }
@@ -32,6 +32,10 @@ footer {
             }
             &--mailto {
                 color: #fff;
+            }
+            &:hover {
+                color: $color-secondary;
+                font-family: Roboto;
             }
         }
     }

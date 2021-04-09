@@ -38,7 +38,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            @include text-font;
+            @include text-font(0.7rem);
         }
         &__icon {
             @include icon-styling;

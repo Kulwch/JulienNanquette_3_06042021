@@ -1,5 +1,6 @@
 .restaurants {
     background: #f6f6f6;
+    padding: 0px 0px 45px 0px;
     &__heading {
         @include flex-row;
         margin: 56px 0px 28px 18px;
@@ -16,12 +17,18 @@
     &__display {
         @include flex-column;
         position: relative;
+        z-index: 1;
     }
     &__picture {
         height: map-get($picture-height, index);
         width: 100%;
+        object-fit: cover;
+        object-position: center 100%;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
+        &--position {
+            object-position: center 60%;
+        }
     }
     &__heading {
         border-bottom-left-radius: 15px;
