@@ -9,11 +9,13 @@
     }
     &__logo {
         margin-left: 65px;
+        width: 161px;
     }
 }
 
 .section {
     background: #f6f6f6;
+    padding-bottom: 56px;
     &__pic {
         @include flex-column;
         height: map-get($picture-height, menu);

@@ -1,10 +1,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css " integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==');
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
 
 a,
@@ -31,16 +33,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.header__logo {
-  width: 162px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -49,6 +41,15 @@ section {
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 5px 15px 0 black;
+          box-shadow: 0 5px 15px 0 black;
+}
+
+.header__logo {
+  width: 162px;
   margin: 23px 0px 12px 0px;
 }
 
@@ -73,11 +74,11 @@ footer .nav {
           flex-direction: column;
   color: #fff;
   padding: 31px 0px 38px 24px;
-  font-family: Roboto, sans-serif;
 }
 
 footer .nav__heading {
   font-family: Shrikhand;
+  font-weight: bold;
 }
 
 footer .nav__link {
@@ -149,10 +150,12 @@ footer .nav__link:hover {
 
 .menu-header__logo {
   margin-left: 65px;
+  width: 161px;
 }
 
 .section {
   background: #f6f6f6;
+  padding-bottom: 56px;
 }
 
 .section__pic {
@@ -234,7 +237,6 @@ footer .nav__link:hover {
 
 .info-section__location-form > .location__search {
   padding-left: 16px;
-  font-family: Roboto, sans-serif;
 }
 
 .info-section__title {
@@ -254,9 +256,8 @@ footer .nav__link:hover {
           justify-content: center;
   text-align: center;
   margin: 44px 80px 0px 65px;
-  font-family: Roboto, sans-serif;
   font-size: 1.35rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .info-section__heading {
@@ -271,37 +272,10 @@ footer .nav__link:hover {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0px 36px 0px 36px;
-  font-size: 1.2rem;
+  font-weight: lighter;
+  font-size: 1.1rem;
   text-align: center;
-  font-weight: 100;
   margin: 15px 0px 35px 0px;
-}
-
-.info-section__explorer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 50px;
-  width: 218px;
-  margin: 0px 78.5px 0px 78.5px;
-  border-radius: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
-          box-shadow: 0 5px 15px 0 #c3c3c3;
-  color: #fff;
-  font-family: Roboto, sans-serif;
-  font-weight: bold;
 }
 
 .manual {
@@ -316,8 +290,6 @@ footer .nav__link:hover {
 
 .manual__heading {
   padding-left: 22px;
-  font-family: Roboto, sans-serif;
-  font-size: 1.4rem;
 }
 
 .manual__list {
@@ -376,7 +348,7 @@ footer .nav__link:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: Roboto, sans-serif;
+  font-size: 0.9rem;
 }
 
 .item .link__icon {
@@ -385,14 +357,30 @@ footer .nav__link:hover {
   font-size: 1.5rem;
 }
 
+.item .link__icon--thinner {
+  margin-right: 22px;
+  color: #7e7e7e;
+  font-size: 1.2rem;
+}
+
 .item .link__description {
-  font-family: Roboto, sans-serif;
   font-weight: bold;
   color: #000000;
+  margin-left: 7px;
+}
+
+.item .link__description--closer {
+  margin-left: 2px;
+}
+
+.item .link__description--closest {
+  margin-left: -2px;
 }
 
 .item .link:hover {
   background: #f5edff;
+  -webkit-box-shadow: 0 5px 15px 0 black;
+          box-shadow: 0 5px 15px 0 black;
 }
 
 .item .link:hover > .link__icon--state {
@@ -417,7 +405,6 @@ footer .nav__link:hover {
   padding: 0;
   margin: 0;
   margin: 56px 0px 28px 18px;
-  font-family: Roboto, sans-serif;
 }
 
 .card {
@@ -447,6 +434,14 @@ footer .nav__link:hover {
   padding: 0;
   margin: 0;
   margin: 0px 18px 18px 18px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
+          box-shadow: 0 5px 15px 0 #c3c3c3;
+}
+
+.card__link:hover {
+  -webkit-box-shadow: 0 5px 15px 0 black;
+          box-shadow: 0 5px 15px 0 black;
 }
 
 .card__display {
@@ -463,6 +458,8 @@ footer .nav__link:hover {
   margin: 0;
   position: relative;
   z-index: 1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .card__picture {
@@ -508,7 +505,6 @@ footer .nav__link:hover {
 .card__header > .card__name {
   padding: 0;
   margin: 18px 0px 0px 14px;
-  font-family: Roboto, sans-serif;
   color: #000000;
   font-weight: bold;
 }
@@ -516,7 +512,6 @@ footer .nav__link:hover {
 .card__header > .card__name + .card__location {
   padding: 0;
   margin: 8px 0px 0px 14px;
-  font-family: Roboto, sans-serif;
   color: #000000;
 }
 
@@ -541,6 +536,45 @@ footer .nav__link:hover {
   color: #000000;
 }
 
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 50px;
+  width: 218px;
+  margin: 0px 78.5px 0px 78.5px;
+  border-radius: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
+          box-shadow: 0 5px 15px 0 #c3c3c3;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
+  background: linear-gradient(#fface8, #ae80e5);
+  -webkit-box-shadow: 0 5px 15px 0 black;
+          box-shadow: 0 5px 15px 0 black;
+}
+
 .btn-new {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -560,7 +594,7 @@ footer .nav__link:hover {
       -ms-flex-align: center;
           align-items: center;
   background: #99E2D0;
-  border-radius: 1px;
+  border-radius: 2px;
   color: #2c9c81;
   font-size: 1rem;
   font-weight: bold;

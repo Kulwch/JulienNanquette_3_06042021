@@ -7,9 +7,9 @@ footer {
         flex-direction: column;
         color: #fff;
         padding: 31px 0px 38px 24px;
-        @include text-font;
         &__heading {
             font-family: Shrikhand;
+            font-weight: bold;
         }
         &__link {
             display: flex;

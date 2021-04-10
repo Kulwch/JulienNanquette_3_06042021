@@ -1,9 +1,9 @@
 .header {
-    display: flex;
+    @include flex-row;
     justify-content: center;
+    @include box-shadow-darker;
     &__logo {
         width: 162px;
-        @include flex-row;
         margin: 23px 0px 12px 0px;
     }
 }

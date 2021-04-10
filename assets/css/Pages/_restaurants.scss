@@ -4,7 +4,6 @@
     &__heading {
         @include flex-row;
         margin: 56px 0px 28px 18px;
-        @include text-font(1.5rem);
     }
 }
 
@@ -13,11 +12,18 @@
     &__link {
         @include flex-column;
         margin: 0px 18px 18px 18px;
+        border-radius: 15px;
+        @include box-shadow;
+        &:hover {
+            @include box-shadow-darker;
+        }
     }
     &__display {
         @include flex-column;
         position: relative;
         z-index: 1;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
     &__picture {
         height: map-get($picture-height, index);
@@ -43,13 +49,11 @@
         >.card__name {
             padding: 0;
             margin: 18px 0px 0px 14px;
-            @include text-font;
             color: $black;
             font-weight: bold;
             +.card__location {
                 padding: 0;
                 margin: 8px 0px 0px 14px;
-                @include text-font;
                 color: $black;
                 +.card__favorite {
                     @include flex-row;
