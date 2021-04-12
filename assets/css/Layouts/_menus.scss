@@ -14,7 +14,7 @@
 }
 
 .section {
-    background: #f6f6f6;
+    background: $light-grey;
     padding-bottom: 56px;
     &__pic {
         @include flex-column;

@@ -1,7 +1,7 @@
 .info-section {
     display: flex;
     flex-direction: column;
-    background-color: #f6f6f6;
+    background-color: $light-grey;
     height: 336px;
     &__location-form {
         display: flex;

@@ -1,8 +1,16 @@
 .header {
     @include flex-row;
+}
+
+.index__link {
+    @include flex-row;
+    flex-basis: 100%;
     justify-content: center;
-    @include box-shadow-darker;
-    &__logo {
+    z-index: 9999;
+    box-shadow: 0px 1px 5px 0px $grey;
+    >.index__logo {
+        @include flex-row;
+        align-items: center;
         width: 162px;
         margin: 23px 0px 12px 0px;
     }

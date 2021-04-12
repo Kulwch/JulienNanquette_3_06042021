@@ -1,0 +1,21 @@
+{
+    "name": "juliennanquette_3_06042021",
+    "version": "1.0.0",
+    "description": "3rd project in the web developer course by OpenClassrooms, Energize a webpage with css animations",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+        "prefix": "postcss ./assets/css/style.css --use autoprefixer -d ./ assets/css/prefixed/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kulwch/JulienNanquette_3_06042021.git"
+    },
+    "author": "Julien Nanquette",
+    "license": "ISC",
+    "browserslist": "last 4 versions",
+    "bugs": {
+        "url": "https://github.com/Kulwch/JulienNanquette_3_06042021/issues"
+    },
+    "homepage": "https://github.com/Kulwch/JulienNanquette_3_06042021#readme"
+}

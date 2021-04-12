@@ -1,5 +1,5 @@
 .restaurants {
-    background: #f6f6f6;
+    background: $light-grey;
     padding: 0px 0px 45px 0px;
     &__heading {
         @include flex-row;
@@ -42,7 +42,7 @@
         background: $white;
     }
     &__header {
-        height: 77px;
+        height: map-get($card-height, name);
         width: 100%;
         @include flex-column;
         flex-wrap: wrap;
