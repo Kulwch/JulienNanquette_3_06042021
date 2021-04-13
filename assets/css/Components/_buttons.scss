@@ -16,6 +16,9 @@
         background: linear-gradient(lighten($color-secondary, 10%), lighten($color-primary, 10%));
         @include box-shadow-darker;
     }
+    &--margin {
+        margin: 34px 78.5px 58px 78.5px;
+    }
 }
 
 .btn-new {

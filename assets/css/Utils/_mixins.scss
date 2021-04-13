@@ -2,10 +2,6 @@
     font-family: Roboto, sans-serif;
 }
 
-@mixin title-font($font-size: 1.8rem) {
-    font-family: Shrikhand, cursive;
-}
-
 @mixin icon-styling {
     margin-right: 22px;
     color: #7e7e7e;

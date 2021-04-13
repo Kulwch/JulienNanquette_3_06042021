@@ -15,7 +15,6 @@
 
 .section {
     background: $light-grey;
-    padding-bottom: 56px;
     &__pic {
         @include flex-column;
         height: map-get($picture-height, menu);
@@ -24,7 +23,7 @@
     &__header {
         @include flex-row;
         margin: -40px 0px 0px 0px;
-        justify-content: flex-start;
+        justify-content: space-between;
         padding-left: 18px;
         align-items: center;
         z-index: 1;
@@ -33,10 +32,69 @@
         background: $light-grey;
     }
     &__heading {
-        @include title-font;
+        font-family: Shrikhand;
+        font-size: 1.6rem;
     }
     &__heart-icon {
-        padding-left: 40px;
+        padding-right: 35px;
         font-size: 1.5rem;
+    }
+}
+
+.dishes {
+    @include flex-column;
+    background: $light-grey;
+    &__category {
+        margin-left: 20px;
+        font-weight: 300;
+        font-size: 1rem;
+        border-bottom: 3px solid $color-tertiary;
+        padding-bottom: 6px;
+        width: 43px;
+    }
+    &__content {
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.dish {
+    @include flex-row;
+    justify-content: space-between;
+    border-radius: 15px;
+    background: $white;
+    height: 68px;
+    width: 350px;
+    margin-bottom: 14px;
+    @include box-shadow;
+    &__heading {
+        width: 82%;
+        @include flex-column;
+        >.dish__name {
+            @include flex-row;
+            margin: 12px 0px 2px 12px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        >.dish__subhead {
+            display: inline-block;
+            margin: 0px 0px 15px 12px;
+            font-weight: 200;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    &__price {
+        @include flex-row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 0px 20px 12px 0px;
+        font-weight: 500;
+    }
+    &:hover {
+        @include box-shadow-darker;
     }
 }

@@ -183,7 +183,6 @@ footer .nav__link:hover {
 
 .section {
   background: #f6f6f6;
-  padding-bottom: 56px;
 }
 
 .section__pic {
@@ -216,9 +215,9 @@ footer .nav__link:hover {
   padding: 0;
   margin: 0;
   margin: -40px 0px 0px 0px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-left: 18px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -230,12 +229,150 @@ footer .nav__link:hover {
 }
 
 .section__heading {
-  font-family: Shrikhand, cursive;
+  font-family: Shrikhand;
+  font-size: 1.6rem;
 }
 
 .section__heart-icon {
-  padding-left: 40px;
+  padding-right: 35px;
   font-size: 1.5rem;
+}
+
+.dishes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: #f6f6f6;
+}
+
+.dishes__category {
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 1rem;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 6px;
+  width: 43px;
+}
+
+.dishes__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dish {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 15px;
+  background: #fff;
+  height: 68px;
+  width: 350px;
+  margin-bottom: 14px;
+  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
+          box-shadow: 0 5px 15px 0 #c3c3c3;
+}
+
+.dish__heading {
+  width: 82%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.dish__heading > .dish__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin: 12px 0px 2px 12px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.dish__heading > .dish__subhead {
+  display: inline-block;
+  margin: 0px 0px 15px 12px;
+  font-weight: 200;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dish__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0px 20px 12px 0px;
+  font-weight: 500;
+}
+
+.dish:hover {
+  -webkit-box-shadow: 0 5px 15px 0 black;
+          box-shadow: 0 5px 15px 0 black;
 }
 
 .info-section {
@@ -611,6 +748,10 @@ footer .nav__link:hover {
   background: linear-gradient(#fface8, #ae80e5);
   -webkit-box-shadow: 0 5px 15px 0 black;
           box-shadow: 0 5px 15px 0 black;
+}
+
+.btn--margin {
+  margin: 34px 78.5px 58px 78.5px;
 }
 
 .btn-new {

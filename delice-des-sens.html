@@ -6,7 +6,9 @@
     <meta name="description" content="Ohmyfood, site de réservation de
         menus dans les restaurants" />
     <meta name=" viewport " content="width=device-width " />
-    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css " integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=" anonymous " />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet " href="/assets/css/style.css " />
 </head>
 
@@ -17,42 +19,111 @@
     </header>
     <main>
         <section class="section">
-            <img class="section__pic" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
+            <img class="section__pic" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg " alt="Un plat en sauce, dressé dans une assiette rectangulaire et incurvé, posé sur une table en bois." />
             <header class="section__header">
-                <h2 class="section__heading">Le délice des sens</h2>
+                <h1 class="section__heading">Le délice des sens</h1>
                 <i class="far fa-heart section__heart-icon "></i>
             </header>
-            <article>
-                <h3>Entrées</h3>
-                <a></a>
-                <a></a>
-                <a></a>
+        </section>
+        <section class="dishes">
+            <h2 class="dishes__category">ENTR&Eacute;ES</h2>
+            <article class="dishes__content">
+                <a class="dish">
+                    <header class="dish__heading">
+                        <h3 class="dish__name">Tartare de thon</h3>
+                        <p class="dish__subhead">Assaisonné au yuzu</p>
+                    </header>
+                    <p class="dish__price">25&euro;</p>
+                </a>
             </article>
-            <article>
-                <h3>Plats</h3>
-                <a></a>
-                <a></a>
-                <a></a>
+            <article class="dishes__content">
+                <a class="dish">
+                    <header class="dish__heading">
+                        <h3 class="dish__name">Bouchée de homard croustillant</h3>
+                        <p class="dish__subhead">Et sa farandole de petits légumes</p>
+                    </header>
+                    <p class="dish__price">35&euro;</p>
+                </a>
             </article>
-            <article>
-                <h3>Desserts</h3>
-                <a></a>
-                <a></a>
-                <a></a>
+            <article class="dishes__content">
+                <a class="dish">
+                    <header class="dish__heading">
+                        <h3 class="dish__name">Velouté de cèpes</h3>
+                        <p class="dish__subhead">Aux truffes</p>
+                    </header>
+                    <p class="dish__price">20&euro;</p>
+                </a>
             </article>
         </section>
-        <form>
-            <a>
-                <input type="button" value="Commander" />
-            </a>
-        </form>
-        <footer>
-            <nav class="nav " aria-label="about ">
-                <h3 class="nav__heading ">ohmyfood</h3>
-                <a class="nav__link nav__link--bold "><i class="fas fa-utensils nav__link--utensils-icon "></i>Proposer un restaurant</a>
-                <a class="nav__link nav__link--bold "><i class="fas fa-hands-helping nav__link--hands-icon "></i>Devenir partenaire</a>
-                <a class="nav__link ">Mentions légales</a>
-                <a class="nav__link nav__link--mailto " href="mailto:xy@zmail.com ">Contact</a>
-            </nav>
-        </footer>
+        <section class="dishes">
+            <h2 class="dishes__category">PLATS</h2>
+            <article class="dishes__content">
+                <a class="dish">
+                    <header class="dish__heading">
+                        <h3 class="dish__name">Poulet rôti aux herbes de Provence</h3>
+                        <p class="dish__subhead">Et sa crème de truffe</p>
+                    </header>
+                    <p class="dish__price">40&euro;</p>
+                </a>
+            </article>
+            <article class="dishes__content">
+                <a class="dish">
+                    <header class="dish__heading">
+                        <h3 class="dish__name">Langouste rôtie</h3>
+                        <p class="dish__subhead">Et ses légumes de saison</p>
+                    </header>
+                    <p class="dish__price">35&euro;</p>
+                </a>
+            </article>
+            <article class="dishes__content">
+                <a class="dish">
+                    <header class="dish__heading">
+                        <h3 class="dish__name">Côte de boeuf Angus</h3>
+                        <p class="dish__subhead">Et sa purée de panais</p>
+                    </header>
+                    <p class="dish__price">44&euro;</p>
+                </a>
+            </article>
+        </section>
+        <section class="dishes">
+            <h2 class="dishes__category">DESSERTS</h2>
+            <article class="dishes__content">
+                <a class="dish">
+                    <header class="dish__heading">
+                        <h3 class="dish__name">Farandole de desserts</h3>
+                        <p class="dish__subhead">Du chef</p>
+                    </header>
+                    <p class="dish__price">18&euro;</p>
+                </a>
+            </article>
+            <article class="dishes__content">
+                <a class="dish">
+                    <header class="dish__heading">
+                        <h3 class="dish__name">Crème brûlée</h3>
+                        <p class="dish__subhead">Revisitée</p>
+                    </header>
+                    <p class="dish__price">22&euro;</p>
+                </a>
+            </article>
+            <article class="dishes__content">
+                <a class="dish">
+                    <header class="dish__heading">
+                        <h3 class="dish__name">Tiramisu</h3>
+                        <p class="dish__subhead">&Agrave; la noisette</p>
+                    </header>
+                    <p class="dish__price">23&euro;</p>
+                </a>
+            </article>
+            <a class="btn btn--margin">Commander</a>
+        </section>
+    </main>
+    <footer>
+        <nav class="nav " aria-label="about ">
+            <h3 class="nav__heading ">ohmyfood</h3>
+            <a class="nav__link nav__link--bold "><i class="fas fa-utensils nav__link--utensils-icon "></i>Proposer un restaurant</a>
+            <a class="nav__link nav__link--bold "><i class="fas fa-hands-helping nav__link--hands-icon "></i>Devenir partenaire</a>
+            <a class="nav__link ">Mentions légales</a>
+            <a class="nav__link nav__link--mailto " href="mailto:xy@zmail.com ">Contact</a>
+        </nav>
+    </footer>
 </body>
