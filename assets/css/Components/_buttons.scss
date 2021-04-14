@@ -1,7 +1,6 @@
 .btn {
     @include flex-row;
-    justify-content: center;
-    align-items: center;
+    @include centering;
     text-align: center;
     height: 3.125rem;
     margin: 0rem 4.9rem 0rem 4.9rem;
@@ -17,13 +16,19 @@
     }
     &--margin {
         margin: 2.125rem 4.9rem 3.625rem 4.9rem;
+        @include desktop-media-query {
+            grid-column: span 3;
+            margin: 2.125rem 40% 3.625rem 40%;
+        }
+    }
+    @include pad-media-query {
+        font-size: 1.4rem;
     }
 }
 
 .btn-new {
     @include flex-row;
-    justify-content: center;
-    align-items: center;
+    @include centering;
     background: $color-tertiary;
     border-radius: 2px;
     color: darken($color-tertiary, 35%);

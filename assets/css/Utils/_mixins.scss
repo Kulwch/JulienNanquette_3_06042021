@@ -7,6 +7,11 @@
     color: #7e7e7e;
 }
 
+@mixin flex {
+    display: flex;
+    box-sizing: borderbox;
+}
+
 @mixin flex-column {
     display: flex;
     flex-direction: column;
@@ -21,6 +26,27 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+@mixin centering {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin pad-media-query {
+    @media screen and(min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop-media-query {
+    @media screen and(min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin pad-padding {
+    padding: 1rem 3rem 3rem 3rem;
 }
 
 @mixin box-shadow {

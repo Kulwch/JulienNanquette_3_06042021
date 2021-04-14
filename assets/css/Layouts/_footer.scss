@@ -1,7 +1,6 @@
 footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #353535;
+    @include flex-column;
+    background-color: $color-footer;
     .nav {
         display: flex;
         flex-direction: column;
@@ -19,16 +18,20 @@ footer {
                 font-weight: bold;
             }
             &--utensils-icon {
-                display: flex;
-                box-sizing: border-box;
+                @include flex;
                 font-size: 14px;
                 padding-right: 0.75rem;
+                @include pad-media-query {
+                    font-size: 1.5rem;
+                }
             }
             &--hands-icon {
-                display: flex;
-                box-sizing: border-box;
+                @include flex;
                 font-size: 11px;
                 margin-right: 0.625rem;
+                @include pad-media-query {
+                    font-size: 1.5rem;
+                }
             }
             &--mailto {
                 color: #fff;
@@ -38,5 +41,11 @@ footer {
                 font-family: cursive;
             }
         }
+        @include pad-media-query {
+            @include centering;
+        }
+    }
+    @include pad-media-query {
+        font-size: 1.5rem;
     }
 }
