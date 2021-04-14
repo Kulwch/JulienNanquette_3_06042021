@@ -1,9 +1,9 @@
 .restaurants {
     background: $light-grey;
-    padding: 0px 0px 45px 0px;
+    padding: 0px 0px 2.8rem 0px;
     &__heading {
         @include flex-row;
-        margin: 56px 0px 28px 18px;
+        margin: 3.5rem 0px 1.75rem 1.125rem;
     }
 }
 
@@ -11,7 +11,7 @@
     @include flex-column;
     &__link {
         @include flex-column;
-        margin: 0px 18px 18px 18px;
+        margin: 0px 1.125rem 1.125rem 1.125rem;
         border-radius: 15px;
         @include box-shadow;
         &:hover {
@@ -32,6 +32,14 @@
         object-position: center 100%;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
+        @media screen and(min-width: 500px) {
+            object-position: center;
+            object-position: center 70%;
+        }
+        @media screen and(min-width: 700px) {
+            height: 15rem;
+            object-position: center 70%;
+        }
         &--position {
             object-position: center 60%;
         }
@@ -48,17 +56,17 @@
         flex-wrap: wrap;
         >.card__name {
             padding: 0;
-            margin: 18px 0px 0px 14px;
+            margin: 1.125rem 0px 0px 0.75rem;
             color: $black;
             font-weight: bold;
             +.card__location {
                 padding: 0;
-                margin: 8px 0px 0px 14px;
+                margin: 0.5rem 0px 0px 0.75rem;
                 color: $black;
                 +.card__favorite {
                     @include flex-row;
                     justify-content: flex-end;
-                    margin: 26px 24px 0px 0px;
+                    margin: 1.625rem 1.5rem 0px 0px;
                     font-size: 1.5rem;
                     font-weight: 100;
                     color: $black;

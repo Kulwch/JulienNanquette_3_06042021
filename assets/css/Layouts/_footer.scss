@@ -6,14 +6,14 @@ footer {
         display: flex;
         flex-direction: column;
         color: #fff;
-        padding: 31px 0px 38px 24px;
+        padding: 1.94rem 0rem 2.375rem 1.5rem;
         &__heading {
             font-family: Shrikhand;
             font-weight: bold;
         }
         &__link {
             display: flex;
-            padding-top: 10px;
+            padding-top: 0.625rem;
             color: $white;
             &--bold {
                 font-weight: bold;
@@ -22,13 +22,13 @@ footer {
                 display: flex;
                 box-sizing: border-box;
                 font-size: 14px;
-                padding-right: 12px;
+                padding-right: 0.75rem;
             }
             &--hands-icon {
                 display: flex;
                 box-sizing: border-box;
                 font-size: 11px;
-                margin-right: 10px;
+                margin-right: 0.625rem;
             }
             &--mailto {
                 color: #fff;

@@ -3,7 +3,7 @@
 }
 
 @mixin icon-styling {
-    margin-right: 22px;
+    margin-right: 2.66%;
     color: #7e7e7e;
 }
 
@@ -24,9 +24,9 @@
 }
 
 @mixin box-shadow {
-    box-shadow: 0 5px 15px 0 #c3c3c3;
+    box-shadow: 0 5px 0.94rem 0 #c3c3c3;
 }
 
 @mixin box-shadow-darker {
-    box-shadow: 0 5px 15px 0 rgb(0, 0, 0 /30%);
+    box-shadow: 0 5px 0.94rem 0 rgb(0, 0, 0 /30%);
 }
