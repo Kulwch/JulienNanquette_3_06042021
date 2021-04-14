@@ -1,37 +1,98 @@
-@mixin text-font($font-size: 1rem) {
-    font-family: Roboto, sans-serif;
-}
-
-@mixin icon-styling {
-    margin-right: 2.66%;
-    color: #7e7e7e;
-}
+/* flexbox */
 
 @mixin flex {
     display: flex;
-    box-sizing: borderbox;
+    box-sizing: border-box;
 }
 
 @mixin flex-column {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    @include no-margin-neither-padding;
 }
 
 @mixin flex-row {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    @include no-margin-neither-padding;
 }
+
+
+/* Grid */
+
+@mixin grid($columns-width: 1fr 1fr 1fr) {
+    display: grid;
+    grid-template-columns: $columns-width;
+}
+
+
+/* Alignments, centering... */
 
 @mixin centering {
     justify-content: center;
     align-items: center;
 }
+
+@mixin text-centering {
+    text-align: center;
+    justify-content: center;
+}
+
+@mixin object-position($percentage: 70%) {
+    object-position: center $percentage;
+}
+
+@mixin text-font($font-size: 1rem) {
+    font-family: Roboto, sans-serif;
+}
+
+
+/* Margin, paddings */
+
+@mixin card-margin {
+    margin: 1.125rem 0px 0px 0.75rem;
+}
+
+@mixin no-margin {
+    margin: 0;
+}
+
+@mixin no-padding {
+    padding: 0;
+}
+
+@mixin pad-padding {
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+@mixin no-margin-neither-padding {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Styling */
+
+@mixin icon-styling {
+    margin-right: 2.66%;
+    color: #7e7e7e;
+}
+
+
+/* Shadows */
+
+@mixin box-shadow {
+    box-shadow: 0 5px 0.94rem 0 #c3c3c3;
+}
+
+@mixin box-shadow-darker {
+    box-shadow: 0 5px 0.94rem 0 rgb(0, 0, 0 /30%);
+}
+
+
+/* Media queries */
 
 @mixin pad-media-query {
     @media screen and(min-width: 768px) {
@@ -45,14 +106,53 @@
     }
 }
 
-@mixin pad-padding {
-    padding: 1rem 3rem 3rem 3rem;
+
+/* Borders */
+
+@mixin border-top-radius($top-radius: 2.2rem) {
+    border-top-left-radius: $top-radius;
+    border-top-right-radius: $top-radius;
 }
 
-@mixin box-shadow {
-    box-shadow: 0 5px 0.94rem 0 #c3c3c3;
+@mixin border-bottom-radius($value: map-get($radius, radius-value)) {
+    border-bottom-left-radius: $value;
+    border-bottom-right-radius: $value;
 }
 
-@mixin box-shadow-darker {
-    box-shadow: 0 5px 0.94rem 0 rgb(0, 0, 0 /30%);
+@mixin border-radius($radius-value: 25px) {
+    border-radius: $radius-value;
+}
+
+
+/* Fonts */
+
+@mixin font-size($size: 1.5rem) {
+    font-size: $size;
+}
+
+@mixin font-weight($weight: bold) {
+    font-weight: $weight;
+}
+
+@mixin black {
+    color: $black;
+}
+
+@mixin white {
+    color: $white;
+}
+
+@mixin color-primary {
+    color: $color-primary;
+}
+
+
+/* Backgrounds */
+
+@mixin light-grey {
+    background: $light-grey;
+}
+
+@mixin color-state {
+    background: $color-state;
 }

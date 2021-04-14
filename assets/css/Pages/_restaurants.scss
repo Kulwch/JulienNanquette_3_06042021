@@ -1,11 +1,10 @@
 .restaurants {
-    background: $light-grey;
+    @include light-grey;
     padding: 0px 0px 2.8rem 0px;
     @include pad-media-query {
         @include pad-padding;
-        display: grid;
+        @include grid(1fr 1fr);
         gap: 2rem;
-        grid-template-columns: repeat(2, 1fr);
     }
     &__heading {
         @include flex-row;
@@ -21,7 +20,7 @@
     &__link {
         @include flex-column;
         margin: 0px 1.125rem 1.125rem 1.125rem;
-        border-radius: 15px;
+        @include border-radius(map-get($radius, radius-value));
         @include box-shadow;
         &:hover {
             @include box-shadow-darker;
@@ -31,31 +30,27 @@
         @include flex-column;
         position: relative;
         z-index: 1;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        @include border-top-radius(map-get($radius, radius-value));
     }
     &__picture {
         height: map-get($picture-height, index);
         width: 100%;
         object-fit: cover;
-        object-position: center 100%;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        @include object-position(100%);
+        @include border-top-radius(map-get($radius, radius-value));
         @media screen and(min-width: 500px) {
-            object-position: center;
-            object-position: center 70%;
+            @include object-position;
         }
         @media screen and(min-width: 700px) {
             height: 15rem;
-            object-position: center 70%;
+            @include object-position;
         }
         &--position {
-            object-position: center 60%;
+            @include object-position(60%);
         }
     }
     &__heading {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
+        @include border-bottom-radius;
         background: $white;
     }
     &__header {
@@ -64,21 +59,21 @@
         @include flex-column;
         flex-wrap: wrap;
         >.card__name {
-            padding: 0;
-            margin: 1.125rem 0px 0px 0.75rem;
-            color: $black;
-            font-weight: bold;
+            @include no-padding;
+            @include card-margin;
+            @include black;
+            @include font-weight;
             +.card__location {
-                padding: 0;
+                @include no-padding;
                 margin: 0.5rem 0px 0px 0.75rem;
-                color: $black;
+                @include black;
                 +.card__favorite {
                     @include flex-row;
                     justify-content: flex-end;
                     margin: 1.625rem 1.5rem 0px 0px;
-                    font-size: 1.5rem;
+                    @include font-size;
                     font-weight: 100;
-                    color: $black;
+                    @include black;
                 }
             }
         }

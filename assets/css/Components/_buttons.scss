@@ -4,12 +4,12 @@
     text-align: center;
     height: 3.125rem;
     margin: 0rem 4.9rem 0rem 4.9rem;
-    border-radius: 25px;
+    @include border-radius;
     background: linear-gradient($color-secondary, $color-primary);
     @include box-shadow;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
+    @include white;
+    @include font-size(1rem);
+    @include font-weight;
     &:hover {
         background: linear-gradient(lighten($color-secondary, 10%), lighten($color-primary, 10%));
         @include box-shadow-darker;
@@ -24,21 +24,4 @@
     @include pad-media-query {
         font-size: 1.4rem;
     }
-}
-
-.btn-new {
-    @include flex-row;
-    @include centering;
-    background: $color-tertiary;
-    border-radius: 2px;
-    color: darken($color-tertiary, 35%);
-    font-size: 1rem;
-    font-weight: bold;
-    height: 1.8rem;
-    width: 5rem;
-    position: absolute;
-    top: 0.75rem;
-    right: 0.7rem;
-    border-style: none;
-    box-shadow: 0 1px 1px 0 darken($color-tertiary, 10%);
 }

@@ -1,28 +1,27 @@
 footer {
     @include flex-column;
-    background-color: $color-footer;
+    background: $color-footer;
     .nav {
-        display: flex;
-        flex-direction: column;
-        color: #fff;
+        @include flex-column;
+        @include white;
         padding: 1.94rem 0rem 2.375rem 1.5rem;
         &__heading {
             font-family: Shrikhand;
-            font-weight: bold;
+            @include font-weight;
         }
         &__link {
-            display: flex;
+            @include flex;
             padding-top: 0.625rem;
-            color: $white;
+            @include white;
             &--bold {
-                font-weight: bold;
+                @include font-weight;
             }
             &--utensils-icon {
                 @include flex;
                 font-size: 14px;
                 padding-right: 0.75rem;
                 @include pad-media-query {
-                    font-size: 1.5rem;
+                    @include font-size;
                 }
             }
             &--hands-icon {
@@ -30,11 +29,11 @@ footer {
                 font-size: 11px;
                 margin-right: 0.625rem;
                 @include pad-media-query {
-                    font-size: 1.5rem;
+                    @include font-size;
                 }
             }
             &--mailto {
-                color: #fff;
+                @include white;
             }
             &:hover {
                 color: $color-secondary;
@@ -46,6 +45,6 @@ footer {
         }
     }
     @include pad-media-query {
-        font-size: 1.5rem;
+        @include font-size;
     }
 }

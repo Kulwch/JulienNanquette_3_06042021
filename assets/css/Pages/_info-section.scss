@@ -1,12 +1,10 @@
 .info-section {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     background-color: $light-grey;
     height: 21rem;
     &__location-form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
+        @include centering;
         background-color: #eaeaea;
         >.location__search {
             padding-left: 1rem;
@@ -14,20 +12,17 @@
     }
     &__title {
         @include flex-row;
-        justify-content: center;
-        text-align: center;
+        @include text-centering;
         margin: 2.75rem 5rem 0px 4rem;
         font-size: 1.35rem;
         font-weight: 600;
     }
     &__heading {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 0px 2.25rem 0px 2.25rem;
+        @include flex-row;
+        @include text-centering;
+        padding: 0rem 2.25rem 0rem 2.25rem;
         font-weight: lighter;
-        font-size: 1.1rem;
-        text-align: center;
-        margin: 0.94rem 0px 2.2rem 0px;
+        @include font-size(1.1rem);
+        margin: 0.94rem 0rem 2.2rem 0rem;
     }
 }

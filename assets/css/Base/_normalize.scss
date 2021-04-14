@@ -1,8 +1,8 @@
 body {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    @include no-margin-neither-padding;
     @include text-font;
+    color: $black;
 }
 
 a,
@@ -12,10 +12,9 @@ a:visited {
 
 ul {
     list-style-type: none;
-    padding: 0;
+    @include no-padding;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 }
