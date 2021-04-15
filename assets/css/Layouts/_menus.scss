@@ -18,6 +18,14 @@
         @include flex-column;
         height: map-get($picture-height, menu);
         object-fit: cover;
+        @include desktop-media-query {
+            @include object-position(70%);
+        }
+        &--position {
+            @include desktop-media-query {
+                @include object-position(60%);
+            }
+        }
     }
     &__header {
         @include flex-row;
