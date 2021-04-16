@@ -32,20 +32,20 @@
     margin: 1.625rem 2.375rem 0px 0px;
     @include font-size;
     font-weight: 100;
-    @include black;
-    position: relative;
+    color: $mid-grey;
+    @include position(relative);
     &--fixed {
         margin: 3rem 2.375rem 0rem 0rem;
     }
     &--inactive {
-        position: absolute;
+        @include position;
         @include heart-position;
         &:hover {
             @include back-gradient-clip-transp;
         }
     }
     &--checked {
-        position: absolute;
+        @include position;
         opacity: 0;
         @include heart-position;
         &:hover {

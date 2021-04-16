@@ -88,29 +88,61 @@
         width: 82%;
         @include flex-column;
         >.dish__name {
-            @include flex-row;
+            display: inline-block;
             margin: 0.75rem 0px 0.125rem 0.75rem;
             @include font-weight(500);
             @include font-size(1.1rem);
+            @include ellipsis;
+            z-index: 99;
         }
         >.dish__subhead {
             display: inline-block;
             margin: 0px 0px map-get($radius, radius-value) 0.75rem;
             font-weight: 200;
             font-size: 0.95rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            @include ellipsis;
         }
     }
     &__price {
         @include flex-row;
         justify-content: flex-end;
         align-items: flex-end;
-        padding: 0px 1.25rem 0.75rem 0px;
+        margin: 0px -2.5rem 0.75rem 0px;
         @include font-weight(500);
+    }
+    &__select {
+        display: inline-block;
+        position: relative;
+        width: 4rem;
+        background: $color-tertiary;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        left: 5rem;
+        &--icon {
+            display: inline-block;
+            position: absolute;
+            top: 1.5rem;
+            left: 1rem;
+            color: $white;
+            font-size: 1.5rem;
+        }
     }
     &:hover {
         @include box-shadow-darker;
+        >.dish__price {
+            transform: translateX(-1rem);
+            @include transition;
+        }
+        >.dish__select {
+            transform: translateX(-5rem);
+            @include transition;
+            >.dish__select--icon {
+                transform: rotate(-360deg);
+                transition: transform 800ms ease;
+            }
+        }
+        >.dish__heading {
+            width: 60%;
+        }
     }
 }

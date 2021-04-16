@@ -28,7 +28,7 @@
 }
 
 
-/* Alignments, centering... */
+/* Positions, alignments, centering... */
 
 @mixin centering {
     justify-content: center;
@@ -46,6 +46,10 @@
 
 @mixin text-font($font-size: 1rem) {
     font-family: Roboto, sans-serif;
+}
+
+@mixin position($type: absolute) {
+    position: $type;
 }
 
 
@@ -78,6 +82,18 @@
 @mixin icon-styling {
     margin-right: 2.66%;
     color: #7e7e7e;
+}
+
+@mixin heart-position {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+}
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -167,8 +183,9 @@
     color: transparent;
 }
 
-@mixin heart-position {
-    position: absolute;
-    bottom: 20%;
-    right: 10%;
+
+/* Animations */
+
+@mixin transition {
+    transition: transform 500ms ease-in-out;
 }
