@@ -156,3 +156,19 @@
 @mixin color-state {
     background: $color-state;
 }
+
+@mixin back-gradient {
+    background: $gradient;
+}
+
+@mixin back-gradient-clip-transp {
+    @include back-gradient;
+    background-clip: text;
+    color: transparent;
+}
+
+@mixin heart-position {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+}

@@ -67,14 +67,6 @@
                 @include no-padding;
                 margin: 0.5rem 0px 0px 0.75rem;
                 @include black;
-                +.card__favorite {
-                    @include flex-row;
-                    justify-content: flex-end;
-                    margin: 1.625rem 1.5rem 0px 0px;
-                    @include font-size;
-                    font-weight: 100;
-                    @include black;
-                }
             }
         }
     }
