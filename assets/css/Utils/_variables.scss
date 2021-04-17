@@ -25,3 +25,9 @@ $title-size: 1.4rem;
 /* Borders */
 
 $radius: (radius-value: 15px, top-radius: 2.2rem);
+
+/* Animations */
+
+$num-load: 10;
+$anim-dur: 2000ms;
+$anim-delay: $anim-dur / $num-load;

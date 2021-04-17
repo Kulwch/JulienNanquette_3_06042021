@@ -69,6 +69,23 @@
                 grid-column: 2/3;
             }
         }
+        @keyframes loading {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(5px);
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        animation: loading 1000ms both;
+        @for $i from 1 through $num-load {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
     }
     @include desktop-media-query {
         @include grid;
