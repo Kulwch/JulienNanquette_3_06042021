@@ -1,5 +1,5 @@
 .menu-header {
-    @include flex-row;
+    @include flex;
     @include centering;
     height: 3.875rem;
     &__link {
@@ -15,7 +15,7 @@
 .section {
     @include light-grey;
     &__pic {
-        @include flex-column;
+        @include flex(column);
         height: map-get($picture-height, menu);
         object-fit: cover;
         @include desktop-media-query {
@@ -28,11 +28,10 @@
         }
     }
     &__header {
-        @include flex-row;
+        @include flex;
         margin: -3.125rem 0px 0px 0px;
-        justify-content: space-between;
+        @include centering(space-between, center);
         padding-left: 1.125rem;
-        align-items: center;
         z-index: 1;
         @include border-top-radius;
         @include light-grey;
@@ -48,7 +47,7 @@
 }
 
 .dishes {
-    @include flex-column;
+    @include flex(column);
     @include light-grey;
     &__category {
         margin-left: 1.25rem;
@@ -62,7 +61,7 @@
         }
     }
     &__content {
-        @include flex-column;
+        @include flex(column);
         @include centering;
         &--grid {
             @include desktop-media-query {
@@ -93,8 +92,8 @@
 }
 
 .dish {
-    @include flex-row;
-    justify-content: space-between;
+    @include flex;
+    @include centering(space-between, none);
     @include border-radius(map-get($radius, radius-value));
     background: $white;
     height: 4.25rem;
@@ -103,7 +102,7 @@
     @include box-shadow;
     &__heading {
         width: 82%;
-        @include flex-column;
+        @include flex(column);
         >.dish__name {
             display: inline-block;
             margin: 0.75rem 0px 0.125rem 0.75rem;
@@ -121,7 +120,7 @@
         }
     }
     &__price {
-        @include flex-row;
+        @include flex;
         justify-content: flex-end;
         align-items: flex-end;
         margin: 0px -2.5rem 0.75rem 0px;

@@ -1,5 +1,5 @@
 .aside-new {
-    @include flex-row;
+    @include flex;
     @include centering;
     background: $color-tertiary;
     @include border-radius(2px);

@@ -1,5 +1,5 @@
 .btn {
-    @include flex-row;
+    @include flex;
     @include centering;
     text-align: center;
     height: 3.125rem;
@@ -29,6 +29,7 @@
 .btn-fav {
     display: inline-block;
     box-sizing: border-box;
+    cursor: pointer;
     margin: 1.625rem 2.375rem 0px 0px;
     @include font-size;
     font-weight: 100;

@@ -1,8 +1,8 @@
 footer {
-    @include flex-column;
+    @include flex(column);
     background: $color-footer;
     .nav {
-        @include flex-column;
+        @include flex(column);
         @include white;
         padding: 1.94rem 0rem 2.375rem 1.5rem;
         &__heading {

@@ -89,7 +89,7 @@
             animation: icon-spin 1500ms cubic-bezier(.26, 1.14, .64, .71) 2;
         }
         &--1 {
-            @include block-absolute;
+            @include block-abs-green;
             left: 4%;
             top: 25%;
             @include pad-media-query {
@@ -100,7 +100,7 @@
             }
         }
         &--2 {
-            @include block-absolute;
+            @include block-abs-green;
             right: 4%;
             top: 25%;
             @include pad-media-query {
@@ -111,7 +111,7 @@
             }
         }
         &--3 {
-            @include block-absolute;
+            @include block-abs-green;
             left: 45%;
             bottom: 45%;
             @include pad-media-query {
@@ -119,7 +119,7 @@
             }
         }
         &--4 {
-            @include block-absolute;
+            @include block-abs-green;
             left: 45%;
             top: 5%;
             @include pad-media-query {
