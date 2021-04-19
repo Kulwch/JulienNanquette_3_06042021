@@ -134,7 +134,8 @@
         background: $color-tertiary;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
-        left: 5rem;
+        left: 4rem;
+        opacity: 0;
         &--icon {
             display: inline-block;
             position: absolute;
@@ -151,7 +152,8 @@
             @include transition;
         }
         >.dish__select {
-            transform: translateX(-5rem);
+            transform: translateX(-4rem);
+            opacity: 1;
             @include transition;
             >.dish__select--icon {
                 transform: rotate(-360deg);

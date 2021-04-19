@@ -96,6 +96,17 @@
     text-overflow: ellipsis;
 }
 
+@mixin block-absolute {
+    display: block;
+    position: absolute;
+    color: $color-tertiary;
+}
+
+@mixin block-relative {
+    display: block;
+    position: relative;
+}
+
 
 /* Shadows */
 
@@ -180,6 +191,7 @@
 @mixin back-gradient-clip-transp {
     @include back-gradient;
     -webkit-background-clip: text;
+    -ms-background-clip: text;
     background-clip: text;
     color: transparent;
 }
