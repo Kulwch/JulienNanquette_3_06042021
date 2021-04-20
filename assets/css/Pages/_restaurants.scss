@@ -23,7 +23,7 @@
         @include border-radius(map-get($radius, radius-value));
         @include box-shadow;
         &:hover {
-            @include box-shadow-darker;
+            @include hover-shadow-transition;
         }
     }
     &__display {

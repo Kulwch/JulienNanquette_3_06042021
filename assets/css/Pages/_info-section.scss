@@ -7,8 +7,14 @@
         @include centering;
         height: 50px;
         background-color: #eaeaea;
+        >.location__icon {
+            margin-left: 2rem;
+        }
         >.location__search {
-            padding-left: 1rem;
+            margin-left: 1rem;
+            background: transparent;
+            border: none;
+            @include font-size(1rem);
         }
     }
     &__title {

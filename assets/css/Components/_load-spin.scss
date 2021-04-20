@@ -71,7 +71,7 @@
     }
     animation: load-opacity 4500ms both ease-in-out;
     &__span {
-        @include block(auto, auto, none, visible);
+        @include block(auto, auto, unset, visible);
     }
     &__icon {
         display: block;

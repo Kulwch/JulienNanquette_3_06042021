@@ -6,7 +6,7 @@ As a "favorite" button will later allow to select the restaurant in a favorite l
 Every link has to have :hover effects at least.
 The icons are from the font awesome library.
 
-Several visual effects are needed: for further information, report to the creative brief.
+Several visual effects are needed: dishes appear at restaurant's page launch, hearts fill themselves when :hover, a green box with a check icon appears from right when a dish is selected, and a loading spinner for the index page. For further information, report to the creative brief.
 
 No framework is allowed, Sass is on opposite needed.
 
@@ -23,6 +23,7 @@ Mockups:
 html structure of the restaurants' cards:
 ```html
 <article>
+  <h3>(hidden)</h3>
   <a>
     <figure>
       <img/>
@@ -30,7 +31,7 @@ html structure of the restaurants' cards:
         <header>
           <h3></h3>
           <p></p>
-          <i>heart icon(font awesome)</i>
+          <span><i>heart icon(font awesome)empty</i><heart icon(font awesome)filled</span
         </header>
       </figcaption>
     </figure>

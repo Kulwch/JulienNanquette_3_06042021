@@ -93,7 +93,7 @@
 
 .dish {
     @include flex;
-    @include centering(space-between, none);
+    @include centering(space-between, unset);
     @include border-radius(map-get($radius, radius-value));
     background: $white;
     height: 4.25rem;
@@ -145,7 +145,7 @@
         }
     }
     &:hover {
-        @include box-shadow-darker;
+        @include hover-shadow-transition;
         >.dish__price {
             transform: translateX(-1rem);
             @include transition;

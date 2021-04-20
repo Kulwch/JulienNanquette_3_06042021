@@ -117,6 +117,18 @@
     box-shadow: 0 5px 0.94rem 0 rgb(0, 0, 0 /30%);
 }
 
+@mixin hover-shadow-transition {
+    @include box-shadow-darker;
+    transition: box-shadow 400ms;
+}
+
+@mixin hover-text-shadow-transition {
+    text-shadow: 1px 1px 2px $color-primary;
+    color: $color-secondary;
+    font-family: cursive;
+    transition: text-shadow 400ms;
+}
+
 
 /* Media queries */
 

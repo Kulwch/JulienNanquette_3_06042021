@@ -11,7 +11,7 @@
         @media screen and(min-width: 768px) {
             @include flex;
             @include pad-padding;
-            @include centering(space-evenly, none);
+            @include centering(space-evenly, unset);
         }
     }
 }
@@ -23,7 +23,7 @@
     width: 87%;
     .link {
         @include flex;
-        @include centering(none, center);
+        @include centering(unset, center);
         width: 100%;
         height: 100%;
         background-color: $light-grey;
@@ -62,14 +62,14 @@
         }
         &:hover {
             @include color-state;
-            @include box-shadow-darker;
+            @include hover-shadow-transition;
             >.link__icon--state {
                 @include color-primary;
             }
         }
         &:focus {
             @include color-state;
-            @include box-shadow-darker;
+            @include hover-shadow-transition;
             >.link__icon--state {
                 @include color-primary;
             }

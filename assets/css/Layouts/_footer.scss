@@ -36,8 +36,7 @@ footer {
                 @include white;
             }
             &:hover {
-                color: $color-secondary;
-                font-family: cursive;
+                @include hover-text-shadow-transition;
             }
         }
         @include pad-media-query {
