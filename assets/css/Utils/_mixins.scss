@@ -1,5 +1,4 @@
-/* flexbox */
-
+// flexbox 
 @mixin flex($dir: row) {
     display: flex;
     flex-direction: $dir;
@@ -7,17 +6,13 @@
     @include no-margin-neither-padding;
 }
 
-
-/* Grid */
-
+//Grid 
 @mixin grid($columns-width: 1fr 1fr 1fr) {
     display: grid;
     grid-template-columns: $columns-width;
 }
 
-
-/* Positions, alignments, centering... */
-
+// Positions, alignments, centering... 
 @mixin centering($justify: center, $align: center) {
     justify-content: $justify;
     align-items: $align;
@@ -40,9 +35,7 @@
     position: $type;
 }
 
-
-/* Margin, paddings */
-
+// Margin, paddings 
 @mixin card-margin {
     margin: 1.125rem 0px 0px 0.75rem;
 }
@@ -64,9 +57,7 @@
     padding: 0;
 }
 
-
-/* Multi-rules styling */
-
+// Multi-rules styling 
 @mixin icon-styling {
     margin-right: 2.66%;
     color: #7e7e7e;
@@ -106,9 +97,7 @@
     overflow: $overflow;
 }
 
-
-/* Shadows */
-
+// Shadows 
 @mixin box-shadow {
     box-shadow: 0 5px 0.94rem 0 #c3c3c3;
 }
@@ -129,9 +118,7 @@
     transition: text-shadow 400ms;
 }
 
-
-/* Media queries */
-
+// Media queries //
 @mixin pad-media-query {
     @media screen and(min-width: 768px) {
         @content;
@@ -144,9 +131,7 @@
     }
 }
 
-
-/* Borders */
-
+// Borders 
 @mixin border-top-radius($top-radius: 2.2rem) {
     border-top-left-radius: $top-radius;
     border-top-right-radius: $top-radius;
@@ -161,9 +146,7 @@
     border-radius: $radius-value;
 }
 
-
-/* Fonts */
-
+// Fonts 
 @mixin font-size($size: 1.5rem) {
     font-size: $size;
 }
@@ -184,9 +167,7 @@
     color: $color-primary;
 }
 
-
-/* Backgrounds */
-
+// Backgrounds 
 @mixin light-grey {
     background: $light-grey;
 }
@@ -199,9 +180,7 @@
     background: $gradient;
 }
 
-
-/* Animations and transitions */
-
+// Animations and transitions 
 @mixin transition {
     transition: transform 500ms ease-in-out;
 }

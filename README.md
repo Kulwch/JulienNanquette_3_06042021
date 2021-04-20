@@ -31,7 +31,7 @@ html structure of the restaurants' cards:
         <header>
           <h3></h3>
           <p></p>
-          <span><i>heart icon(font awesome)empty</i><heart icon(font awesome)filled</span
+          <span><i>heart icon(font awesome)empty</i><i><heart icon(font awesome)filled</i></span
         </header>
       </figcaption>
     </figure>

@@ -6,11 +6,10 @@
         @include flex;
         @include centering;
         height: 50px;
+        width: auto;
         background-color: #eaeaea;
-        >.location__icon {
-            margin-left: 2rem;
-        }
         >.location__search {
+            width: 8rem;
             margin-left: 1rem;
             background: transparent;
             border: none;
