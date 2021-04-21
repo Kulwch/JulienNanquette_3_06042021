@@ -38,3 +38,5 @@ html structure of the restaurants' cards:
   </a>
 </article>
 ```
+
+The site is then deployed on GitHub pages via the Jekyll convention: the partials are in the _sass directory, and the style.scss file is in assets/css. Github pages will automatically generate the css file for itself to display.
