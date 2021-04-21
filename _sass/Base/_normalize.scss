@@ -1,0 +1,21 @@
+body {
+    box-sizing: border-box;
+    @include no-margin-neither-padding;
+    @include text-font;
+    color: $black;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    @include no-padding;
+}
+
+section {
+    @include flex(column);
+}

@@ -1,0 +1,148 @@
+.page {
+    @keyframes content-loading {
+        0% {
+            opacity: 0;
+        }
+        85% {
+            opacity: 0.01;
+        }
+        87% {
+            opacity: 0.02;
+        }
+        88% {
+            opacity: 0.05;
+        }
+        90% {
+            opacity: 0.08;
+        }
+        91% {
+            opacity: 0.1;
+        }
+        93% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    animation: content-loading 4000ms ease-out both;
+}
+
+.loader {
+    @include block(auto, auto, fixed);
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    text-align: center;
+    background: radial-gradient($white, $light-grey);
+    z-index: -10;
+    @keyframes load-opacity {
+        0% {
+            opacity: 0;
+        }
+        1% {
+            opacity: 0.1;
+        }
+        5% {
+            opacity: 0.25;
+        }
+        7% {
+            opacity: 0.5;
+        }
+        10% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 0.9;
+        }
+        90% {
+            opacity: 0.8;
+        }
+        95% {
+            opacity: 0.5;
+        }
+        97% {
+            opacity: 0.25
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    animation: load-opacity 4500ms both ease-in-out;
+    &__span {
+        @include block(auto, auto, unset, visible);
+    }
+    &__icon {
+        display: block;
+        font-size: 50px;
+        &::before {
+            @include block(auto, auto, relative, visible);
+            @keyframes icon-spin {
+                from {
+                    transform: rotate(00deg);
+                }
+                to {
+                    transform: rotate(3turn);
+                }
+            }
+            animation: icon-spin 1500ms cubic-bezier(.26, 1.14, .64, .71) 2;
+        }
+        &--1 {
+            @include block-abs-green;
+            left: 4%;
+            top: 25%;
+            @include pad-media-query {
+                left: 25%;
+            }
+            @include desktop-media-query {
+                left: 30%;
+            }
+        }
+        &--2 {
+            @include block-abs-green;
+            right: 4%;
+            top: 25%;
+            @include pad-media-query {
+                right: 25%;
+            }
+            @include desktop-media-query {
+                right: 30%;
+            }
+        }
+        &--3 {
+            @include block-abs-green;
+            left: 45%;
+            bottom: 45%;
+            @include pad-media-query {
+                left: 50%;
+            }
+        }
+        &--4 {
+            @include block-abs-green;
+            left: 45%;
+            top: 5%;
+            @include pad-media-query {
+                left: 50%;
+                top: 3%;
+            }
+        }
+    }
+    &__name {
+        @include block(auto, auto, relative, visible);
+        font-size: 3rem;
+        top: 25%;
+        font-family: Shrikhand;
+        @include no-margin-neither-padding;
+        @include back-gradient-clip-transp;
+        @keyframes load-spin {
+            from {
+                transform: rotate(00deg);
+            }
+            to {
+                transform: rotate(2turn);
+            }
+        }
+        animation: load-spin 1500ms cubic-bezier(.53, .14, 0, .74) 2 alternate-reverse;
+    }
+}

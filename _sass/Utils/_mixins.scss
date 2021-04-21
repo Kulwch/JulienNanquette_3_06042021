@@ -1,0 +1,186 @@
+// flexbox 
+@mixin flex($dir: row) {
+    display: flex;
+    flex-direction: $dir;
+    box-sizing: border-box;
+    @include no-margin-neither-padding;
+}
+
+//Grid 
+@mixin grid($columns-width: 1fr 1fr 1fr) {
+    display: grid;
+    grid-template-columns: $columns-width;
+}
+
+// Positions, alignments, centering... 
+@mixin centering($justify: center, $align: center) {
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin text-centering {
+    text-align: center;
+    justify-content: center;
+}
+
+@mixin object-position($percentage: 70%) {
+    object-position: center $percentage;
+}
+
+@mixin text-font($font-size: 1rem) {
+    font-family: Roboto, sans-serif;
+}
+
+@mixin position($type: absolute) {
+    position: $type;
+}
+
+// Margin, paddings 
+@mixin card-margin {
+    margin: 1.125rem 0px 0px 0.75rem;
+}
+
+@mixin no-margin {
+    margin: 0;
+}
+
+@mixin no-padding {
+    padding: 0;
+}
+
+@mixin pad-padding {
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+@mixin no-margin-neither-padding {
+    margin: 0;
+    padding: 0;
+}
+
+// Multi-rules styling 
+@mixin icon-styling {
+    margin-right: 2.66%;
+    color: #7e7e7e;
+}
+
+@mixin heart-position {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+}
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin back-gradient-clip-transp {
+    @include back-gradient;
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@mixin block-abs-green {
+    display: block;
+    position: absolute;
+    color: $color-tertiary;
+}
+
+@mixin block($height: auto, $width: auto, $position: absolute, $overflow: visible) {
+    display: block;
+    height: $height;
+    width: $width;
+    position: $position;
+    overflow: $overflow;
+}
+
+// Shadows 
+@mixin box-shadow {
+    box-shadow: 0 5px 0.94rem 0 #c3c3c3;
+}
+
+@mixin box-shadow-darker {
+    box-shadow: 0 5px 0.94rem 0 rgb(0, 0, 0 /30%);
+}
+
+@mixin hover-shadow-transition {
+    @include box-shadow-darker;
+    transition: box-shadow 400ms;
+}
+
+@mixin hover-text-shadow-transition {
+    text-shadow: 1px 1px 2px $color-primary;
+    color: $color-secondary;
+    font-family: cursive;
+    transition: text-shadow 400ms;
+}
+
+// Media queries //
+@mixin pad-media-query {
+    @media screen and(min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop-media-query {
+    @media screen and(min-width: 992px) {
+        @content;
+    }
+}
+
+// Borders 
+@mixin border-top-radius($top-radius: 2.2rem) {
+    border-top-left-radius: $top-radius;
+    border-top-right-radius: $top-radius;
+}
+
+@mixin border-bottom-radius($value: map-get($radius, radius-value)) {
+    border-bottom-left-radius: $value;
+    border-bottom-right-radius: $value;
+}
+
+@mixin border-radius($radius-value: 25px) {
+    border-radius: $radius-value;
+}
+
+// Fonts 
+@mixin font-size($size: 1.5rem) {
+    font-size: $size;
+}
+
+@mixin font-weight($weight: bold) {
+    font-weight: $weight;
+}
+
+@mixin black {
+    color: $black;
+}
+
+@mixin white {
+    color: $white;
+}
+
+@mixin color-primary {
+    color: $color-primary;
+}
+
+// Backgrounds 
+@mixin light-grey {
+    background: $light-grey;
+}
+
+@mixin color-state {
+    background: $color-state;
+}
+
+@mixin back-gradient {
+    background: $gradient;
+}
+
+// Animations and transitions 
+@mixin transition {
+    transition: transform 500ms ease-in-out;
+}

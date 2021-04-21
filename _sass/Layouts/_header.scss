@@ -1,0 +1,17 @@
+.header {
+    @include flex;
+}
+
+.index__link {
+    @include flex;
+    flex-basis: 100%;
+    justify-content: center;
+    z-index: 9999;
+    box-shadow: 0px 1px 5px 0px $grey;
+    >.index__logo {
+        @include flex;
+        align-items: center;
+        width: 10.125rem;
+        margin: 1.44rem 0px 0.75rem 0px;
+    }
+}

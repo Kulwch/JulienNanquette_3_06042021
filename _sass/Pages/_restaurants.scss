@@ -1,0 +1,73 @@
+.restaurants {
+    @include light-grey;
+    padding: 0px 0px 2.8rem 0px;
+    @include pad-media-query {
+        @include pad-padding;
+        @include grid(1fr 1fr);
+        gap: 2rem;
+    }
+    &__heading {
+        @include flex;
+        margin: 3.5rem 0px 1.75rem 1.125rem;
+        @include pad-media-query {
+            grid-column: span 2;
+        }
+    }
+}
+
+.card {
+    @include flex(column);
+    &__link {
+        @include flex(column);
+        margin: 0px 1.125rem 1.125rem 1.125rem;
+        @include border-radius(map-get($radius, radius-value));
+        @include box-shadow;
+        &:hover {
+            @include hover-shadow-transition;
+        }
+    }
+    &__display {
+        @include flex(column);
+        position: relative;
+        z-index: 1;
+        @include border-top-radius(map-get($radius, radius-value));
+    }
+    &__picture {
+        height: map-get($picture-height, index);
+        width: 100%;
+        object-fit: cover;
+        @include object-position(100%);
+        @include border-top-radius(map-get($radius, radius-value));
+        @media screen and(min-width: 500px) {
+            @include object-position;
+        }
+        @media screen and(min-width: 700px) {
+            height: 15rem;
+            @include object-position;
+        }
+        &--position {
+            @include object-position(60%);
+        }
+    }
+    &__heading {
+        @include border-bottom-radius;
+        background: $white;
+    }
+    &__header {
+        height: map-get($card-height, name);
+        width: 100%;
+        @include flex(column);
+        flex-wrap: wrap;
+        >.card__name {
+            @include no-padding;
+            @include card-margin;
+            @include black;
+            @include font-weight;
+            +.card__location {
+                @include no-padding;
+                margin: 0.5rem 0px 0px 0.75rem;
+                @include black;
+            }
+        }
+    }
+}

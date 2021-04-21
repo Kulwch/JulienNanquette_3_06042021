@@ -1,0 +1,34 @@
+.info-section {
+    @include flex(column);
+    background-color: $light-grey;
+    height: 21rem;
+    &__location-form {
+        @include flex;
+        @include centering;
+        height: 50px;
+        width: auto;
+        background-color: #eaeaea;
+        >.location__search {
+            width: 8rem;
+            margin-left: 1rem;
+            background: transparent;
+            border: none;
+            @include font-size(1rem);
+        }
+    }
+    &__title {
+        @include flex;
+        @include text-centering;
+        margin: 2.75rem 5rem 0px 4rem;
+        font-size: 1.35rem;
+        font-weight: 600;
+    }
+    &__heading {
+        @include flex;
+        @include text-centering;
+        padding: 0rem 2.25rem 0rem 2.25rem;
+        font-weight: lighter;
+        @include font-size(1.1rem);
+        margin: 0.94rem 0rem 2.2rem 0rem;
+    }
+}

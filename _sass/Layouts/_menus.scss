@@ -1,0 +1,166 @@
+.menu-header {
+    @include flex;
+    @include centering;
+    height: 3.875rem;
+    &__link {
+        margin: 0rem 4rem 0rem -6rem;
+        @include black;
+    }
+    &__logo {
+        @include flex;
+        width: 10rem;
+    }
+}
+
+.section {
+    @include light-grey;
+    &__pic {
+        @include flex(column);
+        height: map-get($picture-height, menu);
+        object-fit: cover;
+        @include desktop-media-query {
+            @include object-position(70%);
+        }
+        &--position {
+            @include desktop-media-query {
+                @include object-position(60%);
+            }
+        }
+    }
+    &__header {
+        @include flex;
+        margin: -3.125rem 0px 0px 0px;
+        @include centering(space-between, center);
+        padding-left: 1.125rem;
+        z-index: 1;
+        @include border-top-radius;
+        @include light-grey;
+    }
+    &__heading {
+        font-family: Shrikhand;
+        font-size: 1.6rem;
+    }
+    &__heart-icon {
+        padding-right: 2.2rem;
+        @include font-size;
+    }
+}
+
+.dishes {
+    @include flex(column);
+    @include light-grey;
+    &__category {
+        margin-left: 1.25rem;
+        font-weight: 300;
+        @include font-size(1rem);
+        border-bottom: 3px solid $color-tertiary;
+        padding-bottom: 0.375rem;
+        width: 2.7rem;
+        @include desktop-media-query {
+            grid-column: span 3;
+        }
+    }
+    &__content {
+        @include flex(column);
+        @include centering;
+        &--grid {
+            @include desktop-media-query {
+                grid-column: 2/3;
+            }
+        }
+        @keyframes loading {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(5px);
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        animation: loading 1000ms both;
+        @for $i from 1 through $num-load {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+    }
+    @include desktop-media-query {
+        @include grid;
+    }
+}
+
+.dish {
+    @include flex;
+    @include centering(space-between, unset);
+    @include border-radius(map-get($radius, radius-value));
+    background: $white;
+    height: 4.25rem;
+    width: 93.3%;
+    margin-bottom: 0.75rem;
+    @include box-shadow;
+    &__heading {
+        width: 82%;
+        @include flex(column);
+        >.dish__name {
+            display: inline-block;
+            margin: 0.75rem 0px 0.125rem 0.75rem;
+            @include font-weight(500);
+            @include font-size(1.1rem);
+            @include ellipsis;
+            z-index: 99;
+        }
+        >.dish__subhead {
+            display: inline-block;
+            margin: 0px 0px map-get($radius, radius-value) 0.75rem;
+            font-weight: 200;
+            font-size: 0.95rem;
+            @include ellipsis;
+        }
+    }
+    &__price {
+        @include flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 0px -2.5rem 0.75rem 0px;
+        @include font-weight(500);
+    }
+    &__select {
+        display: inline-block;
+        position: relative;
+        width: 4rem;
+        background: $color-tertiary;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        left: 4rem;
+        opacity: 0;
+        &--icon {
+            display: inline-block;
+            position: absolute;
+            top: 1.5rem;
+            left: 1rem;
+            color: $white;
+            font-size: 1.5rem;
+        }
+    }
+    &:hover {
+        @include hover-shadow-transition;
+        >.dish__price {
+            transform: translateX(-1rem);
+            @include transition;
+        }
+        >.dish__select {
+            transform: translateX(-4rem);
+            opacity: 1;
+            @include transition;
+            >.dish__select--icon {
+                transform: rotate(-360deg);
+                transition: transform 800ms ease;
+            }
+        }
+        >.dish__heading {
+            width: 60%;
+        }
+    }
+}
