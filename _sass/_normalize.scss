@@ -3,6 +3,7 @@ body {
     @include no-margin-neither-padding;
     @include text-font;
     color: $black;
+    overflow-x: hidden;
 }
 
 a,
