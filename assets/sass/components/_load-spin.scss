@@ -1,0 +1,115 @@
+.page {
+    @keyframes appear {
+        0% {
+            opacity: 0.0;
+        }
+        50% {
+            opacity: 0.3;
+        }
+        80% {
+            opacity: 0.5;
+        }
+        90% {
+            opacity: 0.8;
+        }
+        95% {
+            opacity: 1;
+        }
+    }
+    animation: appear 3000ms linear;
+}
+
+.loader {
+    @include block(99.9%, auto, absolute, hidden);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 50%;
+    background: transparent;
+    z-index: -900;
+    @keyframes opacify {
+        0% {
+            opacity: 0.5;
+        }
+        2% {
+            opacity: 0.8;
+        }
+        4% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 0.8;
+        }
+        92% {
+            opacity: 0.6;
+        }
+        94% {
+            opacity: 0.5;
+        }
+        96% {
+            opacity: 0.3;
+        }
+        98% {
+            opacity: 0.1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    animation: opacify 3000ms ease-out both;
+    &__name {
+        @include block(auto, auto, relative, hidden);
+        @include title-font(1.8rem);
+        text-align: center;
+        top: 50%;
+    }
+    &__item {
+        @include block(2.5rem, 1rem, absolute, visible);
+        @media screen and (min-width: 1024px) {
+            top: 40%;
+        }
+        top: 38%;
+        left: 50%;
+        background: $load-gradient;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        z-index: 10;
+        transform-origin: 50% 300%;
+        @keyframes spinner {
+            0% {
+                opacity: 0.2;
+            }
+            1% {
+                opacity: 0.6;
+            }
+            2% {
+                opacity: 1;
+            }
+            4% {
+                transform: rotate(0deg);
+            }
+            90% {
+                opacity: 0.8;
+            }
+            92% {
+                opacity: 0.7;
+            }
+            95% {
+                opacity: 0.5;
+            }
+            97% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 0;
+                transform: rotate(360deg);
+            }
+        }
+        animation: spinner 800ms cubic-bezier(.64, .07, .44, .93) both 2;
+        @for $i from 1 through $num-items {
+            &--#{$i} {
+                animation-delay: $anim-delay2 * $i;
+            }
+        }
+    }
+}

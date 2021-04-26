@@ -4,7 +4,7 @@
     "description": "3rd project in the web developer course by OpenClassrooms, Energize a webpage with css animations",
     "main": "index.js",
     "scripts": {
-        "sass": "sass --watch ./sass/main.scss:./assets/css/style.css",
+        "sass": "sass --watch ./assets/sass/main.scss:./assets/css/styles.css",
         "prefix": "postcss ././style.css --use autoprefixer -d ./ ./prefixed/"
     },
     "repository": {

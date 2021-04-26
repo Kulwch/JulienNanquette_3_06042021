@@ -1,0 +1,58 @@
+.btn {
+    @include flex;
+    @include centering;
+    text-align: center;
+    height: 3.125rem;
+    margin: 0rem 4.9rem 0rem 4.9rem;
+    @include border-radius;
+    @include back-gradient;
+    @include box-shadow;
+    @include white;
+    @include font-size(1rem);
+    @include font-weight;
+    &:hover {
+        background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
+        @include hover-shadow-transition;
+    }
+    &--margin {
+        margin: 2.125rem 4.9rem 3.625rem 4.9rem;
+        @include desktop-media-query {
+            grid-column: span 3;
+            margin: 2.125rem 40% 3.625rem 40%;
+        }
+    }
+    @include pad-media-query {
+        font-size: 1.4rem;
+    }
+}
+
+.btn-fav {
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 1.625rem 2.375rem 0px 0px;
+    @include font-size;
+    font-weight: 100;
+    color: $mid-grey;
+    @include position(relative);
+    &--fixed {
+        margin: 3rem 2.375rem 0rem 0rem;
+    }
+    &--inactive {
+        @include position;
+        @include heart-position;
+        &:hover {
+            @include back-gradient-clip-transp;
+        }
+    }
+    &--checked {
+        @include position;
+        opacity: 0;
+        @include heart-position;
+        &:hover {
+            opacity: 1;
+            @include back-gradient-clip-transp;
+            transition: opacity 300ms 200ms ease-in-out;
+        }
+    }
+}
